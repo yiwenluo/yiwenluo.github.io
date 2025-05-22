@@ -1,45 +1,96 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- AdSense snippet to enable other sites on this domain -->
-		<script data-ad-client="ca-pub-4918859368090247" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<html lang="en">
 
-		<title>Yiwen Luo - 羅軼聞</title>
+<head>
+	<meta charset="UTF-8">
+	<title>Yiwen Luo</title>
+	<style>
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background-color: #fff;
+			margin: 0;
+			padding: 20px;
+		}
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="./me.css" />
-		<script type="text/javascript">
+		.container {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+			max-width: 900px;
+			flex-wrap: wrap;
+		}
 
-		(function () {
+		.text-section {
+			flex: 1;
+			min-width: 300px;
+		}
 
-			var COLORS = ["red", "orange", "green", "blue", "purple", "brown"]
+		.text-section h1 {
+			font-size: 2.5rem;
+			font-weight: bold;
+			margin-bottom: 0.5rem;
+		}
 
-			function randomLinkColor() {
-				var index = Math.floor(Math.random() * COLORS.length);
-				var links = document.getElementsByTagName("a");
-				for (var i=0; i<links.length; i++) {
-					links[i].style.color = COLORS[index];
-				}
-			}
+		.text-section h2 {
+			font-size: 1.5rem;
+			font-weight: bold;
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
 
-			window.onload = randomLinkColor;
-		})();
+		.text-section p {
+			font-size: 1rem;
+			margin-bottom: 1rem;
+			line-height: 1.6;
+		}
 
-		</script>
+		.text-section a {
+			color: #666;
+			text-decoration: underline;
+		}
+
+		.emoji {
+			font-size: 1.2rem;
+		}
+
+		.avatar {
+			flex-shrink: 0;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background-color: black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+
+		.avatar img {
+			width: 100%;
+			height: auto;
+		}
+	</style>
 	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<h1>Yiwen Luo</h1> 
-				<div class="social-container">
-					<a class="fa fa-linkedin" target="_blank" href="https://www.linkedin.com/in/yiwen-luo-15777913"></a>
-					<a class="fa fa-twitter" target="_blank" href="https://twitter.com/louisyiwenluo"></a>
-					<a class="fa fa-github" target="_blank" href="https://github.com/yiwenluo"></a>
-				</div>
-			</div>
+
+<body>
+	<div class="container">
+		<div class="text-section">
+			<h1>Yiwen Luo 羅軼聞</h1>
+			<h2>Hello, I’m Yiwen Luo</h2>
+			<p>I'm a Staff Software Engineer at Google DeepMind, based in the New York City area, for now. I used to
+				work on Kindle, Inbox and Gmail. You might have heard of them. <span class="emoji">😉</span></p>
+			<p>Happy to chat in English, Cantonese and Mandarin. Find me on <a
+					href="https://www.linkedin.com/in/yiwen-luo-15777913">LinkedIn</a> and <a
+					href="https://www.threads.net/yiwen.louis">Threads</a>.</p>
 		</div>
-	</body>
+		<div class="avatar">
+			<img src="dp-white.jpg" alt="Yiwen Luo's avatar">
+		</div>
+		</div>
+		</body>
+
 </html>
