@@ -35,11 +35,12 @@
 			margin-bottom: 0.5rem;
 		}
 
-		.text-section h2 {
+		.text-section h3 {
 			font-size: 1.5rem;
 			font-weight: bold;
 			margin-top: 0;
-			margin-bottom: 1rem;
+			margin-bottom: 0;
+			margin-block-end: 0;
 		}
 
 		.text-section p {
@@ -62,7 +63,6 @@
 			width: 200px;
 			height: 200px;
 			border-radius: 50%;
-			background-color: black;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -73,24 +73,59 @@
 			width: 100%;
 			height: auto;
 		}
+
+		.hidden {
+			display: none;
+		}
+
+		.chinese-name {
+			white-space: nowrap;
+		}
+
+		@media (max-width: 600px) {
+			.container {
+				flex-direction: column;
+				align-items: center;
+			}
+			.avatar {
+				margin-bottom: 24px;
+				margin-right: 0;
+				justify-content: center;
+				}
+			#greeting .chinese-name {
+				display: block;
+				margin-top: 0.2em;
+			}
+		}
+
 	</style>
 	</head>
 
 <body>
 	<div class="container">
 		<div class="text-section">
-			<h1>Yiwen Luo 羅軼聞</h1>
-			<h2>Hello, I’m Yiwen Luo</h2>
-			<p>I'm a Staff Software Engineer at Google DeepMind, based in the New York City area, for now. I used to
+			<h3>Hi</h3>
+			<h1 id="greeting">I’m Yiwen Luo <span class="chinese-name">羅軼聞</span></h1>
+			<p>I'm a Staff Software Engineer at Google DeepMind, based in the New York City area, for now.
+				Most recently I contributed to the launch of <a href="https://deepmind.google/models/veo/">Veo3</a>. I used to
 				work on Kindle, Inbox and Gmail. You might have heard of them. <span class="emoji">😉</span></p>
 			<p>Happy to chat in English, Cantonese and Mandarin. Find me on <a
 					href="https://www.linkedin.com/in/yiwen-luo-15777913">LinkedIn</a> and <a
 					href="https://www.threads.net/yiwen.louis">Threads</a>.</p>
 		</div>
 		<div class="avatar">
-			<img src="dp-white.jpg" alt="Yiwen Luo's avatar">
+			<noscript>
+				<img src="dp-white.jpg" alt="Yiwen Luo's avatar" class="avatar-img">
+			</noscript>
+			<img src="dp-white.jpg" alt="Yiwen Luo's avatar" class="avatar-img hidden">
+			<img src="dp-white-side.jpg" alt="Yiwen Luo's avatar" class="avatar-img hidden">
 		</div>
 		</div>
+		<script>
+			const chosen = Math.round(Math.random())
+			console.log("chosen: " + chosen)
+			document.getElementsByClassName("avatar-img")[chosen].classList.remove("hidden")
+		</script>
 		</body>
 
 </html>
